@@ -2,7 +2,7 @@
   "name": "@typescript/github-link",
   "author": "Microsoft Corp.",
   "homepage": "https://github.com/microsoft/typescript-github-link#readme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "Determine the Github URL corresponding to a file (position) on disk",
   "keywords": [

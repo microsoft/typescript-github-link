@@ -19,7 +19,7 @@ if (!lineNumber) {
     }
 }
 
-gh.getGithubUrl(localPath, !!lineNumber ? +lineNumber : undefined).then(
+gh.getGithubLink(localPath, !!lineNumber ? +lineNumber : undefined).then(
     url => {
         console.log(url);
     },

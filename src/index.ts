@@ -11,19 +11,19 @@ export interface SourceLocation {
  * Returns a GitHub URL (or a file URL, if the file is untracked).
  * Throws if no appropriate remote can be identified.
  */
-export async function getGithubUrl(path: string, lineNumber?: number): Promise<string> {
-    return (await getGithubUrlWorker([{ path, lineNumber }]))[0];
+export async function getGithubLink(path: string, lineNumber?: number): Promise<string> {
+    return (await getGithubLinkWorker([{ path, lineNumber }]))[0];
 }
 
 /**
  * Returns a GitHub URL (or a file URL, if untracked) for each location.
  * Throws if no appropriate remote can be identified.
  */
-export async function getGithubUrls(locations: readonly SourceLocation[]): Promise<string[]> {
-    return await getGithubUrlWorker(locations);
+export async function getGithubLinks(locations: readonly SourceLocation[]): Promise<string[]> {
+    return await getGithubLinkWorker(locations);
 }
 
-async function getGithubUrlWorker(locations: readonly SourceLocation[]): Promise<string[]> {
+async function getGithubLinkWorker(locations: readonly SourceLocation[]): Promise<string[]> {
     if (!locations.length) {
         return [];
     }
