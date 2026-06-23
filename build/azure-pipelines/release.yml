@@ -140,7 +140,7 @@ extends:
       - stage: Publish
         displayName: Publish to npmjs
         dependsOn: Build
-        condition: and(succeeded('Build'), eq(dependencies.Build.outputs['Build.publishCheck.ShouldPublish'], 'true'))
+        condition: and(succeeded(), eq(dependencies.Build.outputs['Build.publishCheck.ShouldPublish'], 'true'))
         jobs:
           - job: PublishNpmPackage
             displayName: Publish npm package to npmjs

@@ -6,5 +6,4 @@ CONTRIBUTING.md
 *.tsbuildinfo
 .github
 azure-pipelines.yml
-release.yml
 build
